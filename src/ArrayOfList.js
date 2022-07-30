@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
-const ArrayOfList =()=>{
+const ArrayOfList = () => {
   const data = [
-    "John Doe" ,
-    "Victor Wayne" ,
-     "Jane Doe",
-     "James",
-     "Joe",  
+    { id: 1, name: "John Doe" },
+    { id: 2, name: "Victor Wayne" },
+    { id: 3, name: "Jane Doe" }
   ];
-return(
-  <div>
-  {data.map((user) => (
-    <div className="user" >{user}</div>
-  ))}
-  </div>
-)
-}
+  return (
+    <div>
+      {data.map((user) => (
+        <div className="user" key={user.id}>
+          {user.name}
+        </div>
+      ))}
+    </div>
+  );
+};
 export default ArrayOfList;

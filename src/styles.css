@@ -24,3 +24,109 @@
   flex-direction: column;
   align-items: center;
 }
+.slider {
+  font-size: 40px;
+  padding: 20px;
+  color: red;
+  font-weight: bold;
+}
+.toppings {
+  gap: 20px;
+  padding: 20px;
+}
+.checkList {
+  gap: 20px;
+}
+.lists {
+  padding: 3px;
+}
+.app {
+  font-family: sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+}
+.checked-item,
+.not-checked-item {
+  margin-left: 10px;
+}
+.checked-item {
+  text-decoration: line-through;
+}
+.input-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin: 10px;
+  padding: 10px;
+}
+.labelpass{
+  flex-direction: row;
+ 
+}
+.text{
+  flex-direction: column;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding:10px;
+}
+input[type="text"],
+input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.error {
+  color: red;
+  font-size: 12px;
+}
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.list-container {
+  display: flex;
+}
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+  background: #6cf0c2;
+}
