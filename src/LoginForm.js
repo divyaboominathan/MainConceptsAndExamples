@@ -32,18 +32,36 @@ const LoginForm = () => {
 
     const userData = database.find((user) => user.username === uname.value);
     console.log("user", userData);
-    if (userData) {
-      if (userData.password !== pass.value) {
-        console.log("checkingpass");
-        setErrorMessage({ name: "pass", message: errors.pass });
-        console.log("error", setErrorMessage);
-      } else {
-        setIsSubmitted(true);
-      }
-    } else {
-      setErrorMessage({ name: "uname", message: errors.uname });
+    if(userData){
+    if(userData.username === uname.value && userData.password === pass.value)
+    {
+      setIsSubmitted(true);
     }
-  };
+    else if(userData.username !== uname.value && userData.password !== pass.value)
+    {
+      setErrorMessage({ name: "uname", message: errors.uname });
+      setErrorMessage({ name: "pass", message: errors.pass });
+    }
+    else
+    {
+      setErrorMessage({ name: "pass", message: errors.pass });
+    }
+  }
+  else{
+    setErrorMessage({ name: "uname", message: errors.uname });
+  }
+  //   if (userData) {
+  //     if (userData.password !== pass.value) {
+  //       console.log("checkingpass");
+  //       setErrorMessage({ name: "pass", message: errors.pass });
+  //       console.log("error", setErrorMessage);
+  //     } else if(userData.password === pass.value && userData.username === uname.value){
+  //       setIsSubmitted(true);
+  //     }
+  //   } else {
+  //     setErrorMessage({ name: "uname", message: errors.uname });
+  //   }
+   };
   const renderForm = (
     <div className="form" onSubmit={handleSubmit}>
       <form>
