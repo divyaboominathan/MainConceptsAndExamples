@@ -51,15 +51,14 @@ const LoginForm = () => {
           <label className="labelpass">UserName </label>
 
           <input type="text" name="uname" required />
-
-          {renderErrorMessage("usename")}
+          <div>{renderErrorMessage("uname")}</div>
         </div>
         <div className="input-container">
           <label className="labelpass">Password </label>
 
           <input type="password" name="pass" required />
 
-          {renderErrorMessage("password")}
+          <div> {renderErrorMessage("pass")}</div>
         </div>
         <div className="button-container">
           <button type="submit"> Submit</button>
